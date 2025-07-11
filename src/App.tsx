@@ -2,6 +2,8 @@ import { Navigate, Route, Routes } from "react-router";
 import { UserProfile } from "./pages/user-profile/UserProfile.tsx";
 import { Layout } from "./layout/Layout.tsx";
 
+import "./i18n/i18n.ts";
+
 export function App() {
   return (
     <Routes>

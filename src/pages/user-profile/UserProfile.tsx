@@ -1,10 +1,16 @@
 import { useState } from "react";
-import reactLogo from "../../assets/react.svg";
+import { useTranslation } from "react-i18next";
+
 import viteLogo from "/vite.svg";
+
+import reactLogo from "../../assets/react.svg";
+
 import "../../App.css";
 
 export function UserProfile() {
   const [count, setCount] = useState(0);
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -19,7 +25,7 @@ export function UserProfile() {
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          {t("counter", { count })}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
