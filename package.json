@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@carbon/react": "^1.85.1",
+    "@tanstack/react-query": "^5.82.0",
+    "date-fns": "^4.1.0",
     "i18next": "^25.3.2",
     "prettier": "^3.6.2",
     "react": "^19.1.0",
