@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 import {
   Header,
@@ -38,10 +38,10 @@ export function AppHeader() {
           </HeaderName>
 
           <HeaderNavigation>
-            <HeaderMenuItem as={Link} to={routes.profile}>
+            <HeaderMenuItem as={NavLink} to={routes.profile}>
               {t("header.navigation.profile")}
             </HeaderMenuItem>
-            <HeaderMenuItem as={Link} to={routes.form}>
+            <HeaderMenuItem as={NavLink} to={routes.form}>
               {t("header.navigation.form")}
             </HeaderMenuItem>
           </HeaderNavigation>
@@ -53,10 +53,10 @@ export function AppHeader() {
           >
             <SideNavItems>
               <HeaderSideNavItems>
-                <HeaderMenuItem as={Link} to={routes.profile}>
+                <HeaderMenuItem as={NavLink} to={routes.profile}>
                   {t("header.navigation.profile")}
                 </HeaderMenuItem>
-                <HeaderMenuItem as={Link} to={routes.form}>
+                <HeaderMenuItem as={NavLink} to={routes.form}>
                   {t("header.navigation.form")}
                 </HeaderMenuItem>
               </HeaderSideNavItems>
