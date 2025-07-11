@@ -1,0 +1,28 @@
+@use "@carbon/styles/scss/spacing" as *;
+@use "@carbon/styles/scss/theme" as *;
+@use "@carbon/grid/scss/breakpoint" as *;
+
+.footer {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+
+  border-top: 1px solid $border-subtle;
+}
+
+.leftColumn {
+  text-align: left;
+
+  margin-top: $spacing-03;
+  margin-bottom: $spacing-03;
+}
+
+.rightColumn {
+  text-align: left;
+
+  margin-top: $spacing-03;
+  margin-bottom: $spacing-03;
+
+  @include breakpoint("md") {
+    text-align: right;
+  }
+}

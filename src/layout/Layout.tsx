@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 
 import { Content, Theme } from "@carbon/react";
 
+import { AppFooter } from "./components/app-footer/AppFooter.tsx";
 import { AppHeader } from "./components/app-header/AppHeader.tsx";
 
 export function Layout() {
@@ -14,6 +15,8 @@ export function Layout() {
       <Content>
         <Outlet />
       </Content>
+
+      <AppFooter />
     </>
   );
 }
