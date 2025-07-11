@@ -1,5 +1,18 @@
 {
   "translation": {
+    "header": {
+      "ariaLabel": "ProfiBASE App",
+      "appName": "ProfiBASE",
+      "navigation": {
+        "profile": "Profile",
+        "form": "Form"
+      },
+      "openMenu": "Open menu",
+      "sideNavigation": "Side navigation"
+    },
+    "logo": {
+      "altName": "Logo"
+    },
     "counter": "count is {{count}}"
   }
 }
