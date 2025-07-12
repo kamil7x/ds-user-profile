@@ -1,8 +1,6 @@
 import type { ApiResponse } from "../../types/api.ts";
-import {
-  UserProfileDto,
-  decodeUserProfileDtoFromJson,
-} from "../../types/userProfile.ts";
+import { UserProfileDto } from "../../types/user-profile/UserProfileDto.ts";
+import { decodeUserProfileDtoFromJson } from "../../utils/user-profile/decodeUserProfileDtoFromJson.ts";
 import { USER_PROFILE_STORAGE_KEY } from "../consts.ts";
 
 export function fetchUserProfile(): ApiResponse<UserProfileDto> {
