@@ -5,6 +5,7 @@ import { Button, Heading, Stack } from "@carbon/react";
 
 import { DatePickerField } from "../../../components/form/DatePickerField.tsx";
 import { Form } from "../../../components/form/Form.tsx";
+import { TextAreaField } from "../../../components/form/TextAreaField.tsx";
 import { TextInputField } from "../../../components/form/TextInputField.tsx";
 import { useSaveUserProfile } from "../../../hooks/useSaveUserProfile.ts";
 import { useUserProfile } from "../../../hooks/useUserProfile.ts";
@@ -26,7 +27,7 @@ export function UserForm({ onSuccess }: UserFormProps) {
   const onFormSubmit = useCallback(
     (data: UserFormSchemaType) => {
       console.log(data);
-      mutate({ ...data, avatarUrl: "", about: "" });
+      mutate({ ...data, avatarUrl: "" });
     },
     [mutate],
   );
@@ -66,6 +67,12 @@ export function UserForm({ onSuccess }: UserFormProps) {
           id="birthDate"
           labelText={t("userForm.fields.birthDate")}
           maxDate={Date.now()}
+        />
+
+        <TextAreaField
+          name="about"
+          id="about"
+          labelText={t("userForm.fields.about")}
         />
 
         <Button type="submit">{t("userForm.save")}</Button>

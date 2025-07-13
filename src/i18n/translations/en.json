@@ -20,7 +20,8 @@
         "lastName": "Last name",
         "email": "Email",
         "phoneNumber": "Phone number",
-        "birthDate": "Date of birth"
+        "birthDate": "Date of birth",
+        "about": "About"
       },
       "save": "Save"
     },

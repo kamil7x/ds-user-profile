@@ -17,6 +17,7 @@ export const userFormSchema = yup
       .matches(phoneRegExp, "Phone number is not valid")
       .required(),
     birthDate: yup.date().required(),
+    about: yup.string().required(),
   })
   .required();
 
