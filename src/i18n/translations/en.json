@@ -13,6 +13,19 @@
     "logo": {
       "altName": "Logo"
     },
+    "userForm": {
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email"
+      },
+      "updateProfile": "Update profile"
+    },
+    "error": {
+      "api": {
+        "missingProfile": "Missing profile data"
+      }
+    },
     "counter": "count is {{count}}"
   }
 }

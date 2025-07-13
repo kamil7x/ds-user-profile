@@ -1,3 +1,5 @@
+import { UseMutationOptions } from "@tanstack/react-query";
+
 export type SuccessApiResponse<T> = {
   status: "success";
   data: T;
@@ -15,3 +17,8 @@ export type UseApiReturnValue<T> = {
   data?: T;
   error?: Error | null;
 };
+
+export type UseMutationProps<T> = Pick<
+  UseMutationOptions<T>,
+  "onSuccess" | "onError"
+>;

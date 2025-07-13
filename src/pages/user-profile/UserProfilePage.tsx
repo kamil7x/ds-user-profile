@@ -4,13 +4,16 @@ import { useTranslation } from "react-i18next";
 import viteLogo from "/vite.svg";
 
 import reactLogo from "../../assets/react.svg";
+import { useUserProfile } from "../../hooks/useUserProfile.ts";
 
 import "../../App.css";
 
-export function UserProfile() {
+export function UserProfilePage() {
   const [count, setCount] = useState(0);
 
   const { t } = useTranslation();
+
+  const { data: profileData } = useUserProfile();
 
   return (
     <>

@@ -11,14 +11,17 @@
   },
   "dependencies": {
     "@carbon/react": "^1.85.1",
+    "@hookform/resolvers": "^5.1.1",
     "@tanstack/react-query": "^5.82.0",
     "date-fns": "^4.1.0",
     "i18next": "^25.3.2",
     "prettier": "^3.6.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-hook-form": "^7.60.0",
     "react-i18next": "^15.6.0",
-    "react-router": "^7.6.3"
+    "react-router": "^7.6.3",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
