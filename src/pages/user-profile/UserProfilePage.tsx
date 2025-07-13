@@ -19,7 +19,7 @@ export function UserProfilePage() {
   if (!profileData) {
     return (
       <Section>
-        <Stack gap={6}>
+        <Stack gap={8}>
           <Heading>{t("userProfile.welcome.heading")}</Heading>
           <p>{t("userProfile.welcome.description")}</p>
           <Button
@@ -36,7 +36,7 @@ export function UserProfilePage() {
 
   return (
     <Section as="article">
-      <Stack gap={6}>
+      <Stack gap={8}>
         <header className={styles.header}>
           <div className={styles.avatarContainer}>
             {profileData.avatarUrl && (
@@ -55,27 +55,29 @@ export function UserProfilePage() {
 
         <section className={styles.container}>
           <Section className={styles.aboutSection}>
-            <Stack gap={6}>
+            <Stack gap={8}>
               <Heading>{t("userProfile.about.heading")}</Heading>
               <Section>{profileData.about}</Section>
             </Stack>
           </Section>
 
           <Section className={styles.informationSection}>
-            <Stack gap={6}>
+            <Stack gap={8}>
               <Heading>{t("userProfile.info.heading")}</Heading>
-              <div className={styles.infoItem}>
-                <Calendar aria-label={t("userProfile.info.birthDate")} />
-                {format(profileData.birthDate, "MM/dd/yyyy")}
-              </div>
-              <div className={styles.infoItem}>
-                <Phone aria-label={t("userProfile.info.phoneNumber")} />
-                {profileData.phoneNumber}
-              </div>
-              <div className={styles.infoItem}>
-                <Email aria-label={t("userProfile.info.email")} />
-                {profileData.email}
-              </div>
+              <Stack gap={6}>
+                <div className={styles.infoItem}>
+                  <Calendar aria-label={t("userProfile.info.birthDate")} />
+                  {format(profileData.birthDate, "MM/dd/yyyy")}
+                </div>
+                <div className={styles.infoItem}>
+                  <Phone aria-label={t("userProfile.info.phoneNumber")} />
+                  {profileData.phoneNumber}
+                </div>
+                <div className={styles.infoItem}>
+                  <Email aria-label={t("userProfile.info.email")} />
+                  {profileData.email}
+                </div>
+              </Stack>
             </Stack>
           </Section>
         </section>
