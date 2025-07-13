@@ -14,12 +14,14 @@
       "altName": "Logo"
     },
     "userForm": {
+      "heading": "Update profile",
       "fields": {
         "firstName": "First name",
         "lastName": "Last name",
-        "email": "Email"
+        "email": "Email",
+        "phone": "Phone number"
       },
-      "updateProfile": "Update profile"
+      "save": "Save"
     },
     "error": {
       "api": {

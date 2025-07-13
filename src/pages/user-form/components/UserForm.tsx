@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Button, Stack } from "@carbon/react";
+import { Button, Heading, Stack } from "@carbon/react";
 
 import { Form } from "../../../components/form/Form.tsx";
 import { TextInputField } from "../../../components/form/TextInputField.tsx";
@@ -37,6 +37,8 @@ export function UserForm({ onSuccess }: UserFormProps) {
       onSubmit={onFormSubmit}
     >
       <Stack gap={6}>
+        <Heading>{t("userForm.heading")}</Heading>
+
         <TextInputField
           name="firstName"
           id="firstName"
@@ -52,8 +54,13 @@ export function UserForm({ onSuccess }: UserFormProps) {
           id="email"
           labelText={t("userForm.fields.email")}
         />
+        <TextInputField
+          name="phone"
+          id="phone"
+          labelText={t("userForm.fields.phone")}
+        />
 
-        <Button type="submit">{t("userForm.updateProfile")}</Button>
+        <Button type="submit">{t("userForm.save")}</Button>
       </Stack>
     </Form>
   );
