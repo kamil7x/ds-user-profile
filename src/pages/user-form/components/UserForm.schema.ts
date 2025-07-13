@@ -18,6 +18,7 @@ export const userFormSchema = yup
       .required(),
     birthDate: yup.date().required(),
     about: yup.string().required(),
+    avatarUrl: yup.string(),
   })
   .required();
 

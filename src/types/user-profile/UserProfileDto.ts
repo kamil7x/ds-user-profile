@@ -5,5 +5,5 @@ export interface UserProfileDto {
   phoneNumber: string;
   birthDate: string;
   about: string;
-  avatarUrl: string;
+  avatarUrl?: string;
 }

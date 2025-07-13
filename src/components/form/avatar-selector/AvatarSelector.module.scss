@@ -1,0 +1,45 @@
+@use "@carbon/styles/scss/colors" as *;
+@use "@carbon/styles/scss/spacing" as *;
+
+.container {
+  display: flex;
+  gap: $spacing-04;
+  flex-direction: column;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: $spacing-04;
+
+  .uploader {
+    flex: 0;
+    justify-content: center;
+
+    p, div {
+      display: none;
+    }
+  }
+}
+
+.previewContainer {
+  display: flex;
+
+  .preview {
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+  }
+
+  .placeholder {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray-10;
+    border-radius: 100%;
+  }
+
+}
+
+
