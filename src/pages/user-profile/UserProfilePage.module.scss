@@ -1,0 +1,62 @@
+@use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/grid/scss/breakpoint" as *;
+
+$avatar-size: $spacing-13;
+$avatar-padding: $spacing-04;
+$avatar-border-size: $spacing-04;
+$header-margin-top: $avatar-size / 2 + $avatar-padding + $avatar-border-size;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-06;
+  background: $gray-10;
+  margin-top: $header-margin-top;
+  padding: 0 $spacing-08 $spacing-08;
+
+  @include breakpoint("md") {
+    flex-direction: row;
+  }
+
+  .avatarContainer {
+    padding: $spacing-04;
+    margin-top: -$header-margin-top;
+    border-radius: 100%;
+    border: $spacing-04 solid $white;
+    background: $gray-10;
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  gap: $spacing-06;
+  flex-direction: column;
+
+  @include breakpoint('md') {
+    flex-direction: row;
+    gap: $spacing-10;
+  }
+
+  .aboutSection {
+    flex: 1;
+  }
+
+  .informationSection {
+    @include breakpoint('md') {
+      flex-basis: $spacing-13 * 1.75;
+    }
+
+    .infoItem {
+      display: flex;
+      gap: $spacing-06;
+      align-items: center;
+    }
+  }
+}

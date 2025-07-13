@@ -13,6 +13,22 @@
     "logo": {
       "altName": "Logo"
     },
+    "userProfile": {
+      "welcome": {
+        "heading": "Welcome to ProfiBASE",
+        "description": "We don't have your profile yet. Please update it, so we'll be able to show your data here",
+        "updateProfile": "Update profile"
+      },
+      "about": {
+        "heading": "About me"
+      },
+      "info": {
+        "heading": "Information",
+        "birthDate": "Date of birth",
+        "phoneNumber": "Phone number",
+        "email": "Email address"
+      }
+    },
     "userForm": {
       "heading": "Update profile",
       "ariaLabel": "Update profile form",

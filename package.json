@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.62.0",
     "@carbon/react": "^1.85.1",
     "@hookform/resolvers": "^5.1.1",
     "@tanstack/react-query": "^5.82.0",
