@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { Button, Heading, Stack } from "@carbon/react";
 
+import { DatePickerField } from "../../../components/form/DatePickerField.tsx";
 import { Form } from "../../../components/form/Form.tsx";
 import { TextInputField } from "../../../components/form/TextInputField.tsx";
 import { useSaveUserProfile } from "../../../hooks/useSaveUserProfile.ts";
@@ -25,7 +26,7 @@ export function UserForm({ onSuccess }: UserFormProps) {
   const onFormSubmit = useCallback(
     (data: UserFormSchemaType) => {
       console.log(data);
-      mutate(data);
+      mutate({ ...data, avatarUrl: "", about: "" });
     },
     [mutate],
   );
@@ -55,9 +56,16 @@ export function UserForm({ onSuccess }: UserFormProps) {
           labelText={t("userForm.fields.email")}
         />
         <TextInputField
-          name="phone"
-          id="phone"
-          labelText={t("userForm.fields.phone")}
+          name="phoneNumber"
+          id="phoneNumber"
+          labelText={t("userForm.fields.phoneNumber")}
+        />
+
+        <DatePickerField
+          name="birthDate"
+          id="birthDate"
+          labelText={t("userForm.fields.birthDate")}
+          maxDate={Date.now()}
         />
 
         <Button type="submit">{t("userForm.save")}</Button>

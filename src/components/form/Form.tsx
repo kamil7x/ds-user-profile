@@ -25,11 +25,11 @@ export function Form<TSchema extends FieldValues>({
   onSubmit,
   ...props
 }: FormProps<TSchema>) {
-  const methods = useForm({
+  const form = useForm({
     resolver: yupResolver(schema),
   });
 
-  const { handleSubmit, reset } = methods;
+  const { handleSubmit, reset } = form;
 
   useEffect(() => {
     reset(defaultValues);
@@ -38,7 +38,7 @@ export function Form<TSchema extends FieldValues>({
   return (
     // @ts-expect-error There is something wrong with RHF and yupResolver typings
     <CForm {...props} onSubmit={handleSubmit(onSubmit)}>
-      <FormProvider {...methods}>{children}</FormProvider>
+      <FormProvider {...form}>{children}</FormProvider>
     </CForm>
   );
 }

@@ -1,12 +1,14 @@
 import { ApiResponse } from "../../types/api.ts";
-import { UserProfileDto } from "../../types/user-profile/UserProfileDto.ts";
+import { UserProfile } from "../../types/user-profile/UserProfile.ts";
+import { mapUserProfileObjToDto } from "../../utils/user-profile/mapUserProfileObjToDto.ts";
 import { USER_PROFILE_STORAGE_KEY } from "../consts.ts";
 
 export async function saveUserProfile(
-  data: Partial<UserProfileDto>,
+  data: UserProfile,
 ): Promise<ApiResponse<null>> {
   try {
-    sessionStorage.setItem(USER_PROFILE_STORAGE_KEY, JSON.stringify(data));
+    const dto = mapUserProfileObjToDto(data);
+    sessionStorage.setItem(USER_PROFILE_STORAGE_KEY, JSON.stringify(dto));
 
     return {
       status: "success",

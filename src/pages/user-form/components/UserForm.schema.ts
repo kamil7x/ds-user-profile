@@ -12,10 +12,11 @@ export const userFormSchema = yup
     firstName: yup.string().required(),
     lastName: yup.string().required(),
     email: yup.string().email().required(),
-    phone: yup
+    phoneNumber: yup
       .string()
       .matches(phoneRegExp, "Phone number is not valid")
       .required(),
+    birthDate: yup.date().required(),
   })
   .required();
 
