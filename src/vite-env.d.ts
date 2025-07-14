@@ -7,7 +7,7 @@ interface ViteTypeOptions {
 }
 
 interface ImportMetaEnv {
-  readonly VITE_COOKIE_PROMPT_ENABLED: boolean;
+  readonly VITE_COOKIE_PROMPT_ENABLED: string | undefined;
 }
 
 interface ImportMeta {

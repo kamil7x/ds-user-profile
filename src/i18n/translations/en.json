@@ -47,11 +47,10 @@
       "buttonSelectLabel": "Select",
       "buttonClearLabel": "Clear"
     },
-    "error": {
-      "api": {
-        "missingProfile": "Missing profile data"
-      }
-    },
-    "counter": "count is {{count}}"
+    "cookiePrompt": {
+      "description": "Cookies ipsum dolor sit amet, consectetur adipiscing elit. Morbi et lacinia mauris, porttitor pulvinar mi. In euismod finibus dui, et elementum massa consectetur a. Integer accumsan rhoncus dolor congue porta. Cras rhoncus semper mi vitae tristique. Curabitur iaculis sed felis in pellentesque. Pellentesque venenatis ipsum ut leo hendrerit, id accumsan tellus elementum. Cras facilisis turpis id enim euismod pretium. Duis vehicula tempus terms of service.",
+      "closeButtonLabel": "Close",
+      "acceptButtonLabel": "Accept all"
+    }
   }
 }

@@ -1,0 +1,99 @@
+$md: 672px;
+$lg: 1056px;
+
+@mixin breakpoint($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+$image-size: 80px;
+$image-size-md: 160px;
+
+.container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 100vh;
+  padding: 1.5rem 2rem;
+  background: #eee;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+
+  &.open {
+    position: sticky;
+
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @include breakpoint($md) {
+    padding: 2rem 3rem;
+    gap: 3rem;
+  }
+
+  -webkit-box-shadow: 0px -4px 24px 0px rgba(66, 68, 90, 0.2);
+  -moz-box-shadow: 0px -4px 24px 0px rgba(66, 68, 90, 0.2);
+  box-shadow: 0px -4px 24px 0px rgba(66, 68, 90, 0.2);
+}
+
+.imageContainer {
+  flex: 0;
+
+  .image {
+    width: $image-size;
+    height: $image-size;
+
+    @include breakpoint($md) {
+      width: $image-size-md;
+      height: $image-size-md;
+    }
+  }
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+  overflow-y: auto;
+
+  .content {
+    flex: 1;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: end;
+    justify-content: flex-end;
+
+    .button {
+      padding: 0.5rem 2rem;
+      font-size: 1.25rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.25s;
+
+      &.close {
+        &:hover {
+          background: #ccc;
+        }
+      }
+      &.accept {
+        background: #33f;
+        color: #fff;
+        &:hover {
+          background: #00a;
+        }
+      }
+    }
+  }
+}
