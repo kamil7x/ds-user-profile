@@ -35,7 +35,7 @@ export function UserProfilePage() {
   }
 
   return (
-    <Section as="article">
+    <Section as="article" className={styles.container}>
       <Stack gap={8}>
         <header className={styles.header}>
           <div className={styles.avatarContainer}>

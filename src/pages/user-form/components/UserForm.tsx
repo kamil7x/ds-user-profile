@@ -14,6 +14,8 @@ import { useUserProfile } from "../../../hooks/useUserProfile.ts";
 import { fileToBase64 } from "../../../utils/fileToBase64.ts";
 import { UserFormSchemaType, userFormSchema } from "./UserForm.schema.ts";
 
+import styles from "./UserForm.module.scss";
+
 export interface UserFormProps {
   onSuccess: () => void;
 }
@@ -64,7 +66,7 @@ export function UserForm({ onSuccess }: UserFormProps) {
             />
           </Column>
           <Column sm={4} md={6}>
-            <Stack gap={6}>
+            <Stack gap={6} className={styles.nameContainer}>
               <TextInputField
                 name="firstName"
                 id="firstName"

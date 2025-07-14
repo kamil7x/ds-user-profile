@@ -6,6 +6,13 @@ $avatar-size: $spacing-13;
 $avatar-padding: $spacing-04;
 $avatar-border-size: $spacing-04;
 $header-margin-top: $avatar-size / 2 + $avatar-padding + $avatar-border-size;
+$profile-max-width: $spacing-12 * 12;
+
+.container {
+  width: 100%;
+  max-width: $profile-max-width;
+  margin: 0 auto;
+}
 
 .header {
   display: flex;
