@@ -36,9 +36,11 @@ export function Form<TSchema extends FieldValues>({
   }, [reset, defaultValues]);
 
   return (
-    // @ts-expect-error There is something wrong with RHF and yupResolver typings
-    <CForm {...props} onSubmit={handleSubmit(onSubmit)}>
-      <FormProvider {...form}>{children}</FormProvider>
-    </CForm>
+    <FormProvider {...form}>
+      {/* @ts-expect-error There is something wrong with RHF and yupResolver typings */}
+      <CForm {...props} onSubmit={handleSubmit(onSubmit)}>
+        {children}
+      </CForm>
+    </FormProvider>
   );
 }
