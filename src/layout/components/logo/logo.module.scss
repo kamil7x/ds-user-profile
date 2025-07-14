@@ -1,3 +1,5 @@
+@use "@carbon/styles/scss/spacing" as *;
+
 .logo {
-  margin-right: 8px;
+  margin-right: $spacing-03;
 }

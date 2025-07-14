@@ -1,6 +1,11 @@
 $md: 672px;
 $lg: 1056px;
 
+$close-button-hover-bg: #ccc;
+$accept-button-bg: #33f;
+$accept-button-hover-bg: #00a;
+$accept-button-text-color: #fff;
+
 @mixin breakpoint($width) {
   @media (min-width: $width) {
     @content;
@@ -85,14 +90,14 @@ $image-size-md: 160px;
 
       &.close {
         &:hover {
-          background: #ccc;
+          background: $close-button-hover-bg;
         }
       }
       &.accept {
-        background: #33f;
-        color: #fff;
+        background: $accept-button-bg;
+        color: $accept-button-text-color;
         &:hover {
-          background: #00a;
+          background: $accept-button-hover-bg;
         }
       }
     }
