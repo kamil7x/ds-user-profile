@@ -34,14 +34,14 @@ $profile-max-width: $spacing-12 * 12;
     border: $spacing-04 solid $white;
     background: $gray-10;
 
-    .avatar {
+    .avatar, .placeholder {
       width: 160px;
       height: 160px;
     }
   }
 }
 
-.container {
+.contentContainer {
   display: flex;
   gap: $spacing-06;
   flex-direction: column;

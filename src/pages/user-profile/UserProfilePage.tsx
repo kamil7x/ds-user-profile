@@ -53,7 +53,7 @@ export function UserProfilePage() {
           </Heading>
         </header>
 
-        <section className={styles.container}>
+        <section className={styles.contentContainer}>
           <Section className={styles.aboutSection}>
             <Stack gap={8}>
               <Heading>{t("userProfile.about.heading")}</Heading>
