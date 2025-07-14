@@ -6,6 +6,8 @@ interface UseCookiePromptReturnValue {
   onAccept: () => void;
 }
 
+const STORAGE_VALUE = "disabled";
+
 export function useCookiePrompt(
   storageKey: string,
 ): UseCookiePromptReturnValue {
@@ -13,7 +15,7 @@ export function useCookiePrompt(
     const storedValue = localStorage.getItem(storageKey);
 
     if (storedValue) {
-      return storedValue !== "false";
+      return storedValue !== STORAGE_VALUE;
     }
     return true;
   });
@@ -24,7 +26,7 @@ export function useCookiePrompt(
 
   const onAccept = useCallback(() => {
     setIsOpen(false);
-    localStorage.setItem(storageKey, false);
+    localStorage.setItem(storageKey, STORAGE_VALUE);
   }, [storageKey]);
 
   return {

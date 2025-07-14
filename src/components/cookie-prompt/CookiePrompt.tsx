@@ -14,7 +14,7 @@ export interface CookiePromptProps extends PropsWithChildren {
   className?: string;
 }
 
-const defaultProps: CookiePromptProps = {
+const defaultProps = {
   acceptButtonLabel: "Accept",
   closeButtonLabel: "Close",
   imgAltLabel: "Cookie image",
